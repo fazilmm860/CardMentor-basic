@@ -1,0 +1,41 @@
+*body{
+    display: flex;
+}
+.coming-soon{
+    width: 100%;
+    height: 100px;
+}
+.back-to-top {
+    position: fixed;
+    background: linear-gradient(45deg, #101010, #f5c60a);
+    color: #fff;
+    border-radius: 4px 4px 0 0;
+    right: 15px;
+    bottom: 0;
+    transition: none;
+    visibility: hidden;
+    opacity: 0;
+    width: 64px;
+    height: 34px;
+  }
+  
+  .back-to-top i {
+    line-height: 0;
+    font-size: 20px;
+  }
+  
+  .back-to-top:focus {
+    background: linear-gradient(45deg, #050505, #eea909);
+    color: #fff;
+    outline: none;
+  }
+  
+  .back-to-top:hover {
+    background: #090909;
+    color: #fff;
+  }
+  
+  .back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+  }
