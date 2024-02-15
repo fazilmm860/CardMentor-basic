@@ -178,3 +178,39 @@
   });
 
 })()
+
+// popup //
+
+const popupOverlay=document.querySelector(".popup-overlay");
+const skipButton=document.querySelector(".popup-container .skip-button");
+const visitButton=document.querySelector("popup-container .popup-btn");
+const moreButton=document.querySelector(".more-btn");
+
+
+
+let allowedToSkip=false;
+let popupTimer;
+
+
+
+const showAd=()=>{
+  if(window.scrollY > 100){
+    popupOverlay.classList.add("active");
+
+
+  }
+}
+
+
+
+
+
+
+const startTimer=()=>{
+if(window.scrollY > 100){
+  showAd();
+  window.removeEventListener("scroll",startTimer)
+}
+}
+if(!document.cookie.match(/^(.*;)?\s*.popupCookie\s*=\s*[^;]+(.*)?$/))
+window.addEventListener("scroll",startTimer)
